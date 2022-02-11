@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { dbService } from '../../firebase'
 import { doc, getDoc } from 'firebase/firestore';
 import { Editor, EditorState, RichUtils, convertFromRaw } from 'draft-js';
@@ -14,7 +13,6 @@ const QuestionEditor = ({ userId = '', questionId = '' }) => {
   const [dataFetched, setDataFetched] = useState(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [attachment, setAttachment] = useState('');
-  const navigate = useNavigate();
 
   useEffect(() => {
     // data fetch
@@ -110,7 +108,6 @@ const QuestionEditor = ({ userId = '', questionId = '' }) => {
         document.location.reload();
       } else {
         // 이전 페이지로 링크
-        navigate(-1);
       }
     }
   };
@@ -132,8 +129,6 @@ const QuestionEditor = ({ userId = '', questionId = '' }) => {
         const newQuestion = await addQuestion(userId, editorState, attachment);
         alert('질문이 게시되었습니다');
 
-        // 질문 페이지로 연결
-        navigate(`/post/${newQuestion}`);
       }
     }
   };
