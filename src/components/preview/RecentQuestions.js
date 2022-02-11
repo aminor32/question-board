@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { dbService } from '../../firebase'
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import QuestionPreview from './QuestionPreview';
-import '../../style.css';
 
 const RecentQuestions = () => {
   const [questions, setQuestions] = useState([]);
@@ -18,12 +17,12 @@ const RecentQuestions = () => {
   return (
     <div>
       <section id='section'>
-        <article id='question' style={{padding: '20px'}}>
-          <span id='question' style={{marginBottom: '10px'}}>방금 올라온 질문</span>
+        <h3>방금 올라온 질문</h3>
           {questions.map((questionId) => 
-            <QuestionPreview questionId={questionId} key={questionId} />
+            <article style={{padding: '20px'}} key={questionId}>
+              <QuestionPreview questionId={questionId} />
+            </article>  
           )}
-        </article>
       </section>
     </div>
   );

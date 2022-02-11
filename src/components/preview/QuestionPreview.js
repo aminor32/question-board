@@ -3,7 +3,6 @@ import { BrowserRouter, Link } from 'react-router-dom';
 import { dbService } from '../../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../style.css';
 
 // 질문 미리보기(링크)
 const QuestionPreview = ({ questionId }) => {
