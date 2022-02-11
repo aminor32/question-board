@@ -1,4 +1,4 @@
-GDSC GIST의 미완성 웹 토이 프로젝트 Question Board(https://github.com/GDSC-GIST/Web3_Qeustion-Board)를 완성하는 것을 목표로 합니다.
+GDSC GIST의 미완성 웹 토이 프로젝트 [Question Board](https://github.com/GDSC-GIST/Web3_Qeustion-Board)를 완성하는 것을 목표로 합니다.
 
 Question Borad 팀에서
 * 텍스트 에디터
