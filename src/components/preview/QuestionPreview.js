@@ -23,17 +23,15 @@ const QuestionPreview = ({ questionId }) => {
   }, [questionId, dataFetched]);
 
   return (
-    <BrowserRouter>
-      <Link to={`/post/${questionId}`} className='description' style={{textDecoration: 'none', textAlign: 'left'}}>
-        {dataFetched ? 
-          <>
-            <span style={{marginRight: '30px'}}>{questionObj.grade}/{questionObj.subject}</span>
-            <span>{questionObj.title}</span>
-          </> :
-          <></>
-        }
-      </Link>
-    </BrowserRouter>
+    <Link to={`/post/${questionId}`} className='description' style={{textDecoration: 'none', textAlign: 'left'}}>
+      {dataFetched ? 
+        <>
+          <span style={{marginRight: '30px'}}>{questionObj.grade}/{questionObj.subject}</span>
+          <span>{questionObj.title}</span>
+        </> :
+        <></>
+      }
+    </Link>
   );
 };
 
