@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavigationBar = () => {
   return (
-    <nav className='navbar navbar-expand-sm navbar-light bg-light'>
+    <nav className='navbar fixed-top navbar-expand-sm navbar-light bg-light'>
       <div className='container-fluid'>
         <NavLink to='/recent-questions' className='navbar-brand'>Q&A</NavLink>
         <button 
