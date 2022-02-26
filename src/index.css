@@ -1,3 +1,7 @@
+html, body, .container {
+  height: 100%
+}
+
 .text-box-border {
   min-height: 300px;
   border: 1px solid #ced4da;
